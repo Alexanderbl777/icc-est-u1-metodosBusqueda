@@ -40,16 +40,6 @@ public class MetodosBusqueda {
         }
     }
 
-    public void showPersonN(){
-        String nameToFind = showConsole.inputName();
-        int index = findPersonByName(nameToFind); 
-        if (index >= 0) {
-            showConsole.showMesagge("Persona encontrada:");
-            showConsole.showMesagge(people[index].toString());
-        } else {
-            showConsole.showMesagge("Persona no encontrada.");
-        }
-    }
     public int findPersonByName(String name) {
         for (int i = 0; i < people.length; i++) {
             if (people[i].getName().equalsIgnoreCase(name)) return i;

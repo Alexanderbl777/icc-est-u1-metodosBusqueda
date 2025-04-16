@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import controllers.MetodosBusqueda;
+import controllers.MetodosBusquedaBinario;
 import models.Persona;
 public class App {
    public static void main(String[] args) {
@@ -13,6 +14,10 @@ public class App {
         personas[5]=new Persona(106,"Sofia"); 
         personas[6]=new Persona(107,"Pedro"); 
 
+        MetodosBusquedaBinario mBB = new MetodosBusquedaBinario(personas);
+        mBB.shpwPersonByName();
+        
+        /** 
         MetodosBusqueda mB = new MetodosBusqueda(personas);
         //int[] datos = {3, 5, 7, 9};
         //int posicion = metodosBusqueda.busquedaLineal(datos, 7);
@@ -21,7 +26,7 @@ public class App {
         int opcion;
 
         do {
-            System.out.println("\n--- Menú de búsqueda ---");
+        
             System.out.println("1. Buscar por código");
             System.out.println("2. Buscar por nombre");
             System.out.println("0. Salir");
@@ -33,7 +38,7 @@ public class App {
                     mB.showPerson(); 
                     break;
                 case 2:
-                    mB.showPersonByName();
+                    mB.showPersonByName(); 
                     break;
                 case 0:
                     System.out.println("Saliendo...");
@@ -42,9 +47,8 @@ public class App {
                     System.out.println("Opción inválida");
             }
         } while (opcion != 0);
-
-        sc.close();
-    
+            System.out.println("Error ");
+    */
     }
 
 }

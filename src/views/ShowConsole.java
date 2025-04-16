@@ -1,6 +1,8 @@
 package views;
 import java.util.Scanner;
+import controllers.MetodosBusqueda;
 public class ShowConsole{
+
     private Scanner scanner;
 
     public ShowConsole() {
@@ -10,6 +12,7 @@ public class ShowConsole{
 
     public void showBanner() {
         System.out.println("---- Métodos de búsqueda ----");
+
     }
 
     public int inputCode() {
