@@ -1,17 +1,21 @@
+import controllers.MetodosBusqueda;
+import models.Persona;
 public class App {
-    MetodosBusqueda metodosBusqueda = new MetodosBusqueda();
+   public static void main(String[] args) {
 
-    public static void main(String[] args) {
-        App app = new App();
-        int[] numeros = {3, 7, 1, 9, 5};
-        int valorBuscado = 9;
+        Persona[] personas = new Persona[7];
+        personas[0]=new Persona(101,"Juan"); 
+        personas[1]=new Persona(102,"Maria"); 
+        personas[3]=new Persona(103,"Carlos"); 
+        personas[4]=new Persona(104,"Ana"); 
+        personas[5]=new Persona(105,"Luis"); 
+        personas[6]=new Persona(106,"Sofia"); 
+        personas[7]=new Persona(107,"Pedro"); 
 
-        int resultado = app.metodosBusqueda.busquedaLineal(numeros, 0, valorBuscado);
-
-        if (resultado != -1) {
-            System.out.println("Valor encontrado en la posición: " + resultado);
-        } else {
-            System.out.println("Valor no encontrado.");
-        }
+        MetodosBusqueda mB = new MetodosBusqueda(personas);
+        //int[] datos = {3, 5, 7, 9};
+        //int posicion = metodosBusqueda.busquedaLineal(datos, 7);
+        //System.out.println("Resultado de la búsqueda: " + posicion);
     }
+
 }
