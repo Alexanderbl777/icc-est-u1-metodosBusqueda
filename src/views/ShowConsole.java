@@ -2,30 +2,28 @@ package views;
 import java.util.Scanner;
 public class ShowConsole{
     private Scanner scanner;
-    
 
     public ShowConsole() {
-    }
-
-    public ShowConsole(Scanner scanner) {
         this.scanner = new Scanner(System.in);
         showBanner();
-
     }
 
-    public void showBanner(){
-        System.out.println("----Metodos de busqueda----");
-
+    public void showBanner() {
+        System.out.println("---- Métodos de búsqueda ----");
     }
 
-    public int inputCode(){
-        System.out.println("Ingrese un codigo");
-        int code = scanner.nextInt();
-        return code;
+    public int inputCode() {
+        System.out.print("Ingrese un código: ");
+        return scanner.nextInt();
     }
 
-    public void showMesagge(String mesagge){
-        System.out.println(mesagge);
+    public String inputName() {
+        System.out.print("Ingrese un nombre: ");
+        scanner.nextLine(); 
+        return scanner.nextLine();
     }
 
+    public void showMesagge(String mensaje) {
+        System.out.println(mensaje);
+    }
 }
